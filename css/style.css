@@ -1,0 +1,464 @@
+*{
+  margin: 0;
+padding: 0;
+}
+
+  body{
+      min-height: 100%;
+      position: relative;
+      background-color: rgb(21, 32, 43);
+      
+  }
+
+.lightmode_body{
+  background-color: #fafbfd;
+}
+  
+
+     
+  div .header-conteiner{
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    place-items: center;
+    margin: 20px 0 35px 0;
+    width: 100%;
+    color:black;
+    font-size: larger;
+    font-family: FreeMono, monospace;
+
+  }
+  /* -----------------------   HEADER   --------------------*/
+
+  div .header-conteiner{
+      display: grid;
+      grid-template-columns: 10% 80% 10%;
+      place-items: center;
+      margin: 20px 0 35px 0;
+      width: 100%;
+      color: white;
+      font-size: larger;
+  }
+
+  #settings_title{
+    margin-left: 10%;
+  }
+  
+  .dividing-line{
+      width: 80%;
+      height: 1px;
+      margin: 0 auto;
+      background:  #005C97;
+  }
+
+  #encabezado{
+      justify-content: center;
+      text-align: center;
+  }
+
+  
+
+ 
+  #settings-menu{
+      cursor: pointer;
+      font-size: 20px;
+      border: none;
+    }
+  
+    .header{
+      display: grid;
+      grid-template-columns: 12.5% 75% 12.5%;
+      place-items: center;
+      margin: 20px 0 35px 0;
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+      color: white;
+  }
+  /* -----------------------   ERRORS & LIST   --------------------*/
+
+.arrow{
+  transform:  scale(0.125);
+  animation-duration: 2s;
+  animation-name: arrow;
+}
+@keyframes arrow{
+  0% {transform: scale(0%);}
+  100% {transform: scale(100%);}
+}
+
+  section.errors{
+      width: 90%;
+      margin-left: 10%;
+      padding-top: 20px;
+      color: red;
+      font-size: medium;
+      font-family: OCR A Std, monospace;
+  }
+
+
+  section.list{
+      width: 100%;
+      margin:auto ;
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+      transition: 1s;
+      margin-bottom: 5%;
+  }
+  
+/*------------------------------  NODES  ---------------------------- */
+
+.node_div{
+  margin-top: 2.5%;
+  height: 10%;
+  width: 10%;
+  margin-left: 1%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div .node{
+  justify-content: flex-start;
+  text-align: center;
+  height: 70px;
+  width: 70px;
+  margin-top: 50px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  border-radius: 50%;
+  background-color:salmon;
+  z-index: 1;
+
+  animation-duration: 1s;
+  animation-name: node_animation;
+  cursor: pointer;
+}
+
+@keyframes node_animation{
+  0% { 
+    transform:  scale(0);
+  }
+ 
+  100% {
+    transform: scale(1.0);
+}
+}
+
+.number_div{
+  height: 25px;
+  width: 25px;
+  text-align: center;
+  justify-content: center;
+  font-family: FreeMono, monospace;
+  font-size: x-large;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 22.5px;
+}
+
+/*-----------------------  SETTINGS SIDEBAR ------------------------- */
+ 
+
+#settings{
+      top: 0;
+      position: fixed;
+      margin: 0;
+      padding: 0;
+      width: 250px;
+      height: 100%;
+      background-color:  rgb(56, 68, 77);
+      text-align: center;
+      color: white;
+      left: -250px;
+      z-index: 5;
+      transition: all 550ms linear;
+      font-family: FreeMono, monospace;
+}
+  .settings-header{
+      margin: 15px 10px;
+      display: grid;
+      grid-template-columns: 90% 10%
+  }
+
+  #speed_nodes{
+      margin: 40px 15px 15px ;
+  }
+  #speed_nodes p{
+    margin: 40px 15px 15px ;
+}
+
+  #speed_arrow{
+      margin: 40px 10px;
+  }
+
+  #speed_arrow p{
+    margin: 40px 15px 15px;
+}
+
+
+  #close-settings{
+      margin-top: 10px;
+      cursor: pointer;
+  }
+
+/*-----------------------  OPERATIONS  ------------------------- */
+
+section.operations {
+  width: 100% ;
+  position: fixed;
+  bottom: 2%;
+  z-index: 2;
+  
+}
+
+div.wrapper{
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-auto-rows: minmax(150px, auto);
+  align-items: center;
+}
+
+.button{
+  width: 80%;
+  margin-top: 7px;
+  margin-left: 10%;
+  background-color: #005C97;
+  color:floralwhite;
+  border-width: 0;
+  font-family: FreeMono, monospace;
+  font-size: medium;
+  height: 30px;
+  border-radius: 15px;
+}
+
+.input{
+  font-family: FreeMono, monospace;
+  width: 80%;
+  height: 20px;
+  border-width: 0;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-left: 10%;
+  box-sizing: border-box;
+  background-color: #C6E3F7;
+}
+
+
+.sector_boton{
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 15px;
+  width: 100%;
+  height: 100px;
+  background-color: #184869;
+  place-items: center;
+}
+
+
+.delete{
+  left: 25%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  grid-column-start: 2;
+    grid-column-end: -2;
+    grid-column: span 1;
+}
+
+.insert{
+  left: 25%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.search{
+  left: 25%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+@media (max-width:1200px) {
+  .delete{
+      left: 5%;
+      width: 90%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      grid-column-start: 2;
+        grid-column-end: -2;
+        grid-column: span 1;
+    }
+    
+    .insert{
+      left: 5%;
+      width: 90%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+    
+    .search{
+      left: 5%;
+      width: 90%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+  
+     /* ------------------------------   NODES  --------------------------*/
+
+    /* 120 x 80 */
+    div .node{
+      text-align: center;
+      height: 40px;
+      width: 40px;
+      margin-top: 40px;
+
+      border-radius: 50%;
+      background-color:salmon;
+      z-index: 1;
+      animation-duration: 1s;
+      animation-name: node_animation;
+      cursor: pointer;
+    }
+
+    .node_div{
+      height: 10%;
+      width: 10%;
+      margin-left: 8.25%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .number_div{
+      height: 20px;
+      width: 20px;
+      text-align: center;
+      justify-content: center;
+      font-family: FreeMono, monospace;
+      font-size: medium;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10px;
+    }
+    
+    /* ------------------------------   HEADER CELL  --------------------------*/
+
+  div .header-conteiner{
+      display: grid;
+      grid-template-columns: 10% 80% 10%;
+      place-items: center;
+      margin: 20px 0 35px 0;
+      width: 100%;
+      color: white;
+      font-size: large;
+      font-family: FreeMono, monospace;
+  }
+
+  #theme-switcher{
+      margin-right: 25px;
+      cursor: pointer;
+  }
+
+  #settings-menu{
+      margin-left: 25px;
+  }
+
+}
+/*-----------------------  *******  ------------------------- */
+@media (max-width:375px) {
+  .delete{
+      left: 1%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      grid-column-start: 2;
+        grid-column-end: -2;
+        grid-column: span 1;
+    }
+    
+    .insert{
+      left: 0.5%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+    
+    .search{
+      left: 0.5%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+  
+     /* ------------------------------   NODES  --------------------------*/
+
+    /* 120 x 80 */
+    div .node{
+      text-align: center;
+      height: 30px;
+      width: 30px;
+      margin-top: 40px;
+
+      border-radius: 50%;
+      background-color:salmon;
+      z-index: 1;
+      animation-duration: 1s;
+      animation-name: node_animation;
+      cursor: pointer;
+    }
+
+    .node_div{
+      height: 10%;
+      width: 10%;
+      margin-left: 8.25%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .number_div{
+      height: 20px;
+      width: 20px;
+      text-align: center;
+      justify-content: center;
+      font-family: FreeMono, monospace;
+      font-size: medium;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 5px;
+    }
+    
+    /* ------------------------------   HEADER CELL  --------------------------*/
+
+  div .header-conteiner{
+      display: grid;
+      grid-template-columns: 10% 80% 10%;
+      place-items: center;
+      margin: 20px 0 35px 0;
+      width: 100%;
+      color: white;
+      font-size: medium;
+  }
+
+  #theme-switcher{
+      margin-right: 25px;
+  }
+
+  #settings-menu{
+      margin-left: 25px;
+  }
+
+}
